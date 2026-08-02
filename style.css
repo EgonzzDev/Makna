@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #000; /* Warna dasar */
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Background PNG */
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("login background.png") center center / cover no-repeat;
+    opacity: 0.3; /* 30% (ubah ke 0.2-0.4 sesuai selera) */
+    z-index: -1;
+}
