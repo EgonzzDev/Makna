@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar - EXNime</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="logo-container">
+    <img src="exnime.png" alt="EXNime Logo" class="logo-img">
+</div>
+
+<div class="container">
+  <div class="login-box">
+    <div class="login-header-profile">
+        <img src="elaina.png" alt="Elaina Profile" class="elaina-avatar">
+        <p class="login-sweet-text">buat akun dulu ya sayang 😘</p>
+    </div>
+
+    <form id="register-form">
+        <h1 class="login-title">DAFTAR</h1>
+        <div class="input-group">
+            <input type="text" id="reg-name" class="input-box" placeholder="Nama Lengkap" required>
+        </div>
+        <div class="input-group">
+            <input type="email" id="reg-email" class="input-box" placeholder="Email Address" required>
+        </div>
+        <div class="input-group">
+            <input type="password" id="reg-password" class="input-box" placeholder="Password Baru" required>
+        </div>
+        <button type="submit" class="login-btn">Daftar Sekarang</button>
+        <p class="register-text">
+            Sudah punya akun? <a href="index.html">Login</a>
+        </p>
+    </form>
+  </div>
+</div>
+
+<script>
+    const registerForm = document.getElementById('register-form');
+
+    registerForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('reg-name').value;
+        const email = document.getElementById('reg-email').value;
+        const password = document.getElementById('reg-password').value;
+
+        localStorage.setItem('savedName', name);
+        localStorage.setItem('savedEmail', email);
+        localStorage.setItem('savedPassword', password);
+
+        alert('Pendaftaran berhasil, sayang! 😘 Silakan login.');
+        window.location.href = "index.html"; // Balikin ke halaman login
+    });
+</script>
+</body>
+</html>
